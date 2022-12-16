@@ -48,7 +48,7 @@ function open {
 }
 
 foreach ($editor in 'gvim', 'gim') {
- if ( $c = get-command $editor ) {
+ if ( $c = get-command $editor -ea 0 ) {
    $EDITOR=$c.Path;
    break;
  }
